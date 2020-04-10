@@ -15,15 +15,30 @@ function renderTodos() {
   // Render a new li for each todo
   for (var i = 0; i < todos.length; i++) {
     var todo = todos[i];
-
     var li = document.createElement("li");
+    li.setAttribute("data-index", i);
     li.textContent = todo;
     todoList.appendChild(li);
+
+
+    var btn = document.createElement("button");
+    btn.textContent = "complete"
+    li.appendChild(btn);
+    btn.addEventListener("click", function () {
+
+      const dataIndex = li.getAttribute("data-index")
+      console.log(dataIndex)
+
+      todos.splice(dataIndex, 1)
+      renderTodos();
+
+
+    });
   }
 }
 
 // When form is submitted...
-todoForm.addEventListener("submit", function(event) {
+todoForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
   var todoText = todoInput.value.trim();
