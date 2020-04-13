@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>JavaScript Content!</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body>
 
   <h1>Drink Selection!</h1>
   <hr>
+  
+  <script type="text/javascript">
 
   <div id="drink-options"></div>
 
-  <script type="text/javascript">
-
-    var drinkList = [
+  var drinkList = [
       "Coffee: $5",
       "Espresso: $7",
       "Cappuccino: $6",
@@ -25,9 +27,22 @@
       "Ice Tea: $4"
     ];
 
-    // Using JavaScript programmatically append each drinkList item to the "drink-options" div
-    // HINT: you will need a for loop to go over each element in the list
+    // create a ul tag
+    var ulTag =$("<ul>")
 
+    // Using JavaScript programmatically append each drinkList item to the "drink-options" div
+    for( var i=0; i<drinkList.length; i++){
+      var liTag =$("<li>")
+        
+      // add the loop item as text to the li tag
+      var drinkItem = drinkList[i];
+      liTag.text(drinkItem);
+
+    // append the li tag to the ul
+      ulTag.append(liTag);
+    }
+    // once loop is done, append ul tag to the drink-options div
+    $("#drink-options").append(ulTag);
 
   </script>
 

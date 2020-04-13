@@ -13,3 +13,8 @@
   3. **HINT:** You will need counter variables.
 
 * **BONUS:** Add an image to the `image-div` on the click event.
+
+
+create an alert about each sandwich type
+send a second alert displaying how many of that specific sandwich was eaten
+create a click event with an image
