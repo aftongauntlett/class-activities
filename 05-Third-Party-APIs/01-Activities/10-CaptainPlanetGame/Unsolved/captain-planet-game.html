@@ -4,13 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Captain Planet: The Game</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Bootstrap File -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
 
 
   <!-- JQuery -->
+  
   <script src="https://code.jquery.com/jquery.js"></script>
 
 </head>
@@ -31,6 +34,9 @@
           <span class="fa fa-music"></span> Play Theme!</button>
         <button class="btn btn-dark btn-xs pause-button">
           <span class="fa fa-pause"></span> Pause Song</button>
+        <!-- added a laugh button -->
+        <button class="btn btn-warning btn-xs laugh-button">
+          <span class="fa fa-music"></span> Play Evil Laugh!</button>
       </div>
 
     </div>
@@ -44,144 +50,199 @@
           <div class="card-body">
             <div class="text-center">
               <button class="btn btn-dark btn-lg normal-button">
-                <span class="fa fa-ok"></span> Normal</button>
+                <span class="fa fa-ok"></span> Normal</button><br><br>
               <button class="btn btn-primary btn-lg grow-button">
                 <span class="fa fa-plus"></span> Grow</button>
               <button class="btn btn-danger btn-lg shrink-button">
-                <span class="fa fa-minus"></span> Shrink</button>
+                <span class="fa fa-minus"></span> Shrink</button><br><br>
+              <!-- added a stretch button -->
+              <button class="btn btn-danger btn-lg stretch-button">
+                <span class="fa fa-plus"></span> Stretch</button>
+               
             </div>
           </div>
         </div>
 
         <!-- Controls (Superpower Visibility) -->
         <div id="visibilityControls" class="card">
-          <h4 class="card-header">Superpowers - Invisiblity!</h4>
-          <div class="card-body">
-            <div class="text-center">
-              <button class="btn btn-dark btn-lg vis-button">
+          <h4 class="card-header">Superpowers!</h4>
+          <div class="text-center">
+            <div class="card-body">
+              <button class="btn btn-info btn-lg vis-button">
                 <span class="fa fa-eye"></span> Visible</button>
-              <button class="btn btn-info btn-lg invis-button">
+              <button class="btn btn-dark btn-lg invis-button">
                 <span class="fa fa-eye-slash"></span> Invisible</button>
+              <!-- added a clone button -->
             </div>
-          </div>
-        </div>
-
-        <!-- Controls (Superpower Move Controls) -->
-        <div id="moveControls" class="card">
-          <h4 class="card-header">Move Controls</h4>
-          <div class="card-body">
-            <div class="text-center mb-1">
-              <button class="btn btn-dark btn-lg fa fa-arrow-up up-button">Up</button>
-            </div>
-            <div class="text-center">
-              <button class="btn btn-dark btn-lg fa fa-arrow-left left-button">Left</button>
-              <button class="btn btn-dark btn-lg fa fa-arrow-down down-button">Down</button>
-              <button class="btn btn-dark btn-lg fa fa-arrow-right right-button">Right</button>
-            </div>
-            <br>
-            <div class="text-center">
-              <button class="btn btn-dark btn-lg back-button">
-                <span class="fa fa-comment"></span> Go Planet!</button>
-            </div>
-          </div>
+            <div>
+              <button class="btn btn-success btn-lg clone-button">
+                <span class="fa fa-plus"></span> Clone</button>
+            </div><br>
+            <!-- Fire -->
+            <button class="btn btn-danger btn-lg invis-button">
+              <span class="fa fa-eye-slash"></span> Fire</button>
+            <!-- Warter -->
+            <button class="btn btn-primary btn-lg invis-button">
+              <span class="fa fa-eye-slash"></span> Water</button>
+          </div><br>
         </div>
       </div>
+    </div>
 
-      <!-- Right Card (Captain Planet Hero)-->
-      <div class="col-lg-6">
-
-        <!-- Captain Planet Image -->
-        <img src="assets/captain-planet.jpg" alt="" class="img captain-planet" style="position:absolute; top:50px; left: 80px; z-index: -20; height: 300px">
+    <!-- Controls (Superpower Move Controls) -->
+    <div id="moveControls" class="card">
+      <h4 class="card-header">Move Controls</h4>
+      <div class="card-body">
+        <div class="text-center mb-1">
+          <button class="btn btn-dark btn-lg fa fa-arrow-up
+up-button">Up</button>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-dark btn-lg fa fa-arrow-left
+left-button">Left</button>
+          <button class="btn btn-dark btn-lg fa fa-arrow-down
+down-button">Down</button>
+          <button class="btn btn-dark btn-lg fa fa-arrow-right
+right-button">Right</button>
+        </div>
+        <br>
+        <div class="text-center">
+          <button class="btn btn-dark btn-lg back-button">
+            <span class="fa fa-comment"></span> Go Planet!</button>
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- Right Card (Captain Planet Hero)-->
+  <div class="col-lg-6">
+
+    <!-- Captain Planet Image -->
+    <img src="assets/captain-planet.jpg" alt="" class="img captain-planet"
+      style="position:absolute; top:50px; left: 80px; z-index: -20;
+height: 300px">
+
+<img src="https://media.giphy.com/media/WUhJWlngOkDYs/giphy.gif
+" alt="" class="img-fire"
+style="position:absolute; top:50px; left: 80px; z-index: -20;
+height: 300px">
+
+
+<img src="https://media.giphy.com/media/drFw4AVBHeaoE/giphy.gif
+" alt="" class="img-water"
+style="position:absolute; top:50px; left: 80px; z-index: -20;
+height: 300px">
+
+
+  </div>
+  </div>
+  </div>
+
   <script>
 
-  // JavaScript function that wraps everything
-  $(document).ready(function() {
+    // JavaScript function that wraps everything
+    $(document).ready(function () {
 
-    var captainPlanet = $(".captain-planet");
+      var captainPlanet = $(".captain-planet");
+      var fire = $(".fire");
+      var water = $(".water");
 
-    // Gets Link for Theme Song
-    var audioElement = document.createElement("audio");
-    audioElement.setAttribute("src", "assets/captainplanet24.mp3");
+      // Gets Link for Theme Song
+      var audioElement = document.createElement("audio");
+      audioElement.setAttribute("src", "assets/captainplanet24.mp3");
 
-    // Theme Button
-    $(".theme-button").on("click", function() {
-      audioElement.play();
-    });
-    $(".pause-button").on("click", function() {
-      audioElement.pause();
-    });
+      // Theme Button
+      $(".theme-button").on("click", function () {
+        audioElement.play();
+      });
+      $(".pause-button").on("click", function () {
+        audioElement.pause();
+      });
 
-    // Size Buttons
-    $(".normal-button").on("click", function() {
-      captainPlanet.animate({ height: "300px" });
-    });
-    $(".grow-button").on("click", function() {
-      captainPlanet.animate({ height: "500px" });
-    });
-    $(".shrink-button").on("click", function() {
-      captainPlanet.animate({ height: "100px" });
-    });
+      // Size Buttons
+      $(".normal-button").on("click", function () {
+        captainPlanet.animate({ height: "300px" });
+      });
+      $(".grow-button").on("click", function () {
+        captainPlanet.animate({ height: "500px" });
+      });
+      $(".shrink-button").on("click", function () {
+        captainPlanet.animate({ height: "100px" });
+      });
+      // stretch
+      $(".stretch-button").on("click", function () {
+        captainPlanet.animate({ width: "1000px" });
+      });
+      // stretch reset
+      $(".stretch-button").on("click", function () {
+        captainPlanet.animate({ height: "300px" , width: "400px" });
+      });
 
-    // Visibility Buttons
-    $(".vis-button").on("click", function() {
-      captainPlanet.animate({ opacity: "1" });
-    });
-    $(".invis-button").on("click", function() {
-      captainPlanet.animate({ opacity: "0.05" });
-    });
+      // Visibility Buttons
+      $(".vis-button").on("click", function () {
+        captainPlanet.animate({ opacity: "1" });
+      });
+      $(".invis-button").on("click", function () {
+        captainPlanet.animate({ opacity: "0.05" });
+      });
+      // fire on click
+      $(".fire-button").on("click", function () {
+        fire.animate({                              });
+      });
+      // water on click
+      $(".water-button").on("click", function () {
+       water.animate({                               });
+      });
 
-    // Move Buttons
-    $(".up-button").on("click", function() {
-      captainPlanet.animate({ top: "-=200px" }, "normal");
-    });
-    $(".down-button").on("click", function() {
-      captainPlanet.animate({ top: "+=200px" }, "normal");
-    });
-    $(".left-button").on("click", function() {
-      captainPlanet.animate({ left: "-=200px" }, "normal");
-    });
-    $(".right-button").on("click", function() {
-      captainPlanet.animate({ left: "+=200px" }, "normal");
-    });
-    $(".back-button").on("click", function() {
-      captainPlanet.animate({ top: "50px", left: "80px" }, "fast");
-    });
-
-    // Keyboard move controls
-    $(document).keyup(function(e) {
-      switch (e.which) {
-
-      // Move Buttons (Keyboard Down)
-      case 40:
-        captainPlanet.animate({ top: "+=200px" }, "normal");
-        break;
-
-        // Move Buttons (Keyboard Right)
-      case 39:
-        captainPlanet.animate({ left: "+=200px" }, "normal");
-        break;
-
-        // Move Buttons (Keyboard Up)
-      case 38:
+      // Move Buttons
+      $(".up-button").on("click", function () {
         captainPlanet.animate({ top: "-=200px" }, "normal");
-        break;
-
-        // Move Buttons (Keyboard Left)
-      case 37:
+      });
+      $(".down-button").on("click", function () {
+        captainPlanet.animate({ top: "+=200px" }, "normal");
+      });
+      $(".left-button").on("click", function () {
         captainPlanet.animate({ left: "-=200px" }, "normal");
-        break;
+      });
+      $(".right-button").on("click", function () {
+        captainPlanet.animate({ left: "+=200px" }, "normal");
+      });
+      $(".back-button").on("click", function () {
+        captainPlanet.animate({ top: "50px", left: "80px" }, "fast");
+      });
 
-      default:
-        break;
-      }
+      // Keyboard move controls
+      $(document).keyup(function (e) {
+        switch (e.which) {
+
+          // Move Buttons (Keyboard Down)
+          case 40:
+            captainPlanet.animate({ top: "+=200px" }, "normal");
+            break;
+
+          // Move Buttons (Keyboard Right)
+          case 39:
+            captainPlanet.animate({ left: "+=200px" }, "normal");
+            break;
+
+          // Move Buttons (Keyboard Up)
+          case 38:
+            captainPlanet.animate({ top: "-=200px" }, "normal");
+            break;
+
+          // Move Buttons (Keyboard Left)
+          case 37:
+            captainPlanet.animate({ left: "-=200px" }, "normal");
+            break;
+
+          default:
+            break;
+        }
+      });
     });
-  });
 
   </script>
 
 </body>
+
 </html>
