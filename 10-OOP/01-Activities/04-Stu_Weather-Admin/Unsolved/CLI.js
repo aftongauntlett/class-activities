@@ -15,6 +15,6 @@ var myAdmin = new WeatherAdmin();
 if (loginType === "admin") {
   myAdmin.getData();
 }
-else{
+else if {
   myAdmin.newUserSearch(userName, userLocation);
 }
