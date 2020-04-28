@@ -1,0 +1,3 @@
+
+Name: bob Location: los angeles, ca Date: 01-28-2020
+Name: bob Location: San Diego, ca Date: 01-28-2020
