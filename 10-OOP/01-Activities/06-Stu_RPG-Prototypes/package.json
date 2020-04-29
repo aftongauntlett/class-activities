@@ -1,0 +1,11 @@
+{
+  "name": "06-stu_rpg-prototypes",
+  "version": "1.0.0",
+  "description": "In this activity you will generate RPG characters using Objects and prototypes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
