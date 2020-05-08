@@ -1,24 +1,33 @@
 // Dependencies
 // ===========================================================
 var express = require("express");
-
 var app = express();
 var PORT = 3000;
 
 // Data
 // ===========================================================
-var yoda = {
+const allCharacters = {
+
+yoda = {
   name: "Yoda",
   role: "Jedi Master",
   age: 900,
   forcePoints: 2000
-};
+},
 
-var darthmaul = {
+darthmaul = {
   name: "Darth Maul",
   role: "Sith Lord",
   age: 200,
   forcePoints: 1200
+},
+
+  obiWanKenobi = {
+  name: "Obi Wan Kenobi",
+  role: "Jedi Knight",
+  age: 60,
+  forcePoints: 1350
+}
 };
 
 // Create one more data entry for the character Obi Wan Kenobi.
@@ -35,12 +44,19 @@ app.get("/", function(req, res) {
   res.send("Welcome to the Star Wars Page!");
 });
 
+app.get("/", function(req, res) {
+  const charName = req.params.characterName;
+  const jsonObject = [charName];
+  res.json(charName);
+})
+
 app.get("/yoda", function(req, res) {
   res.json(yoda);
 });
 
 app.get("/darthmaul", function(req, res) {
   res.json(darthmaul);
+  
 });
 
 // Create a new Express route that leads users to the new Obi Wan Kenobi Data
